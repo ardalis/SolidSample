@@ -5,7 +5,6 @@ using System.IO;
 
 namespace ArdalisRating
 {
-
     /// <summary>
     /// The RatingEngine reads the policy application details from a file and produces a numeric 
     /// rating value based on the details.
@@ -22,7 +21,8 @@ namespace ArdalisRating
             // load policy - open file policy.json
             string policyJson = File.ReadAllText("policy.json");
 
-            var policy = JsonConvert.DeserializeObject<Policy>(policyJson, new StringEnumConverter());
+            var policy = JsonConvert.DeserializeObject<Policy>(policyJson,
+                new StringEnumConverter());
 
             switch (policy.Type)
             {
