@@ -1,0 +1,62 @@
+﻿/* Valid Auto Policy */
+{
+  "type": "Auto",
+  "make": "BMW"
+}
+
+/* No Make */
+{
+  "type": "Auto"
+}
+
+/*
+LAND Samples
+*/
+
+/* Valid Land Policy */
+{
+  "type": "Land",
+  "bondAmount": "1000000",
+  "valuation": "1100000"
+}
+
+
+/* No Bond Amount or Valuation */
+{
+  "type": "Land"
+}
+
+
+
+/*
+LIFE Samples
+*/
+
+/* Valid Life Policy */
+{
+  "type": "Life",
+  "dateOfBirth": "1970-05-10",
+  "amount": "1000000"
+}
+
+/* No Date of Birth */
+{
+  "type": "Life",
+  "amount": "1000000"
+}
+
+/* No Amount */
+{
+  "type": "Life",
+  "dateOfBirth": "1970-05-10"
+}
+
+/* Centenarian */
+{
+  "type": "Life",
+  "dateOfBirth": "1918-05-10",
+  "amount": "10000000"
+}
+
+
+
