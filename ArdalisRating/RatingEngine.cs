@@ -1,17 +1,7 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System;
+﻿using System;
 
 namespace ArdalisRating
 {
-    public class JsonPolicySerializer
-    {
-        public Policy GetPolicyFromJsonString(string jsonString)
-        {
-            return JsonConvert.DeserializeObject<Policy>(jsonString,
-                new StringEnumConverter());
-        }
-    }
     /// <summary>
     /// The RatingEngine reads the policy application details from a file and produces a numeric 
     /// rating value based on the details.
