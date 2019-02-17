@@ -100,4 +100,65 @@ namespace ArdalisRating
             Logger.Log("Rating completed.");
         }
     }
+
+    public class DoAnything<TArg, TResult>
+    {
+        private Func<TArg, TResult> _function;
+        public DoAnything(Func<TArg, TResult> function)
+        {
+            this._function = function;
+        }
+        public TResult Execute(TArg a)
+        {
+            return _function(a);
+        }
+    }
+
+    public abstract class DoAnything2<TResult, TArg>
+    {
+        public abstract TResult Execute(TArg a);
+    }
+    public class MessageService
+    {
+        public string GetMessage() => "New message";
+    }
+public interface INotificationService
+{
+    void SendText(string SmsNumber, string message);
+    void SendEmail(string to, string from, string subject, string body);
+}
+public class SmtpNotificationService : INotificationService
+{
+    public void SendEmail(string to, string from, string subject, string body)
+    {
+        // actually send email here
+    }
+
+    public void SendText(string SmsNumber, string message)
+    {
+        throw new NotImplementedException();
+    }
+}
+    public class DoOneThing
+{
+    private readonly MessageService _messageService;
+
+        public DoOneThing(MessageService messageService) => _messageService = messageService;
+        public void Execute()
+    {
+        Console.WriteLine(_messageService.GetMessage());
+    }
+}
+
+public class DoSomethingElse
+{
+    public void SomethingElse()
+    {
+        var doThing = new DoOneThing();
+        doThing.Execute();
+
+        // other stuff
+    }
+}
+
 }
