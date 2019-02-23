@@ -16,10 +16,21 @@
                     return new LifePolicyRater(engine, engine.Logger);
 
                 default:
-                    // TODO: Implement Null Object Pattern
-                    // Logger.Log("Unknown policy type");
-                    return null;
+                    return new UnknownPolicyRater(engine, engine.Logger);
             }
+        }
+    }
+
+    public class UnknownPolicyRater : Rater
+    {
+        public UnknownPolicyRater(RatingEngine engine, ConsoleLogger logger)
+            : base(engine, logger)
+        {
+        }
+
+        public override void Rate(Policy policy)
+        {
+            _logger.Log("Unknown policy type");
         }
     }
 }
