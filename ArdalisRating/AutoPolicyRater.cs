@@ -2,17 +2,28 @@
 
 namespace ArdalisRating
 {
-    public class AutoPolicyRater
+    public abstract class Rater
     {
-        private readonly RatingEngine _engine;
-        private ConsoleLogger _logger;
+        protected readonly RatingEngine _engine;
+        protected readonly ConsoleLogger _logger;
 
-        public AutoPolicyRater(RatingEngine engine, ConsoleLogger logger)
+        public Rater(RatingEngine engine, ConsoleLogger logger)
         {
             _engine = engine;
             _logger = logger;
         }
-        public void Rate(Policy policy)
+
+        public abstract void Rate(Policy policy);
+    }
+
+    public class AutoPolicyRater : Rater
+    {
+        public AutoPolicyRater(RatingEngine engine, ConsoleLogger logger)
+            : base(engine, logger)
+        {
+        }
+
+        public override void Rate(Policy policy)
         {
             _logger.Log("Rating AUTO policy...");
             _logger.Log("Validating policy.");
@@ -29,7 +40,6 @@ namespace ArdalisRating
                 }
                 _engine.Rating = 900m;
             }
-
         }
     }
 }
