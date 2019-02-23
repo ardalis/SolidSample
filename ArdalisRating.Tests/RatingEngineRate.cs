@@ -12,7 +12,7 @@ public void ReturnsRatingOf10000For200000LandPolicy()
 {
     var policy = new Policy
     {
-        Type = PolicyType.Land,
+        //Type = PolicyType.Land,
         BondAmount = 200000,
         Valuation = 200000
     };
@@ -31,7 +31,7 @@ public void ReturnsRatingOf10000For200000LandPolicy()
         {
             var policy = new Policy
             {
-                Type = PolicyType.Land,
+                //Type = PolicyType.Land,
                 BondAmount = 200000,
                 Valuation = 260000
             };

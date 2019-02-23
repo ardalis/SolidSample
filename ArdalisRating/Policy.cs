@@ -5,7 +5,8 @@ namespace ArdalisRating
 
     public class Policy
     {
-        public PolicyType Type { get; set; }
+        public string Type { get; set; }
+
         #region Life Insurance
         public string FullName { get; set; }
         public DateTime DateOfBirth { get; set; }
