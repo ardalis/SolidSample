@@ -29,7 +29,7 @@ namespace ArdalisRating.Tests
             var result = serializer.GetPolicyFromJsonString(inputJson);
 
             var policy = new Policy {
-                //Type = PolicyType.Auto,
+                Type = "Auto",
                 Make = "BMW" };
             AssertPoliciesEqual(result, policy);
         }

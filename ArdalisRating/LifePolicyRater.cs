@@ -4,8 +4,8 @@ namespace ArdalisRating
 {
     public class LifePolicyRater : Rater
     {
-        public LifePolicyRater(RatingEngine engine, ConsoleLogger logger)
-            : base(engine, logger)
+        public LifePolicyRater(IRatingContext context)
+            : base(context)
         {
         }
 
@@ -38,10 +38,10 @@ namespace ArdalisRating
             decimal baseRate = policy.Amount * age / 200;
             if (policy.IsSmoker)
             {
-                _engine.Rating = baseRate * 2;
+                _context.UpdateRating(baseRate * 2);
                 return;
             }
-            _engine.Rating = baseRate;
+            _context.UpdateRating(baseRate);
         }
     }
 }
