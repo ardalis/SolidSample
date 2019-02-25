@@ -1,10 +1,5 @@
 ﻿namespace ArdalisRating
 {
-    public interface IUpdateRating
-    {
-        void UpdateRating(decimal rating);
-    }
-
     public interface IRatingContext : ILogger
     {
         string LoadPolicyFromFile();

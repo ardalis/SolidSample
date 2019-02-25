@@ -2,7 +2,6 @@
 
 namespace ArdalisRating
 {
-
     public enum PolicyType
     {
         Life = 0,
