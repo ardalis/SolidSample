@@ -4,7 +4,7 @@ namespace ArdalisRating
 {
     public class AutoPolicyRater : Rater
     {
-        public AutoPolicyRater(IUpdateRating ratingUpdater)
+        public AutoPolicyRater(IRatingUpdater ratingUpdater)
             : base(ratingUpdater)
         {
         }
@@ -22,10 +22,10 @@ namespace ArdalisRating
             {
                 if (policy.Deductible < 500)
                 {
-                    _updateRating.UpdateRating(1000m);
+                    _ratingUpdater.UpdateRating(1000m);
                     return;
                 }
-                _updateRating.UpdateRating(900m);
+                _ratingUpdater.UpdateRating(900m);
             }
         }
     }

@@ -2,7 +2,6 @@
 
 namespace ArdalisRating
 {
-
     public class Policy
     {
         public string Type { get; set; }

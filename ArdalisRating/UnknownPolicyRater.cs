@@ -2,7 +2,7 @@
 {
     public class UnknownPolicyRater : Rater
     {
-        public UnknownPolicyRater(IUpdateRating ratingUpdater)
+        public UnknownPolicyRater(IRatingUpdater ratingUpdater)
             : base(ratingUpdater)
         {
         }

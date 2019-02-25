@@ -2,7 +2,7 @@
 {
     public class LandPolicyRater : Rater
     {
-        public LandPolicyRater(IUpdateRating ratingUpdater)
+        public LandPolicyRater(IRatingUpdater ratingUpdater)
             :base(ratingUpdater)
         {
         }
@@ -21,7 +21,7 @@
                 Logger.Log("Insufficient bond amount.");
                 return;
             }
-            _updateRating.UpdateRating(policy.BondAmount * 0.05m);
+            _ratingUpdater.UpdateRating(policy.BondAmount * 0.05m);
         }
     }
 }
