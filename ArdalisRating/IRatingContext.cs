@@ -1,15 +1,17 @@
 ﻿namespace ArdalisRating
 {
-    public interface IRatingContext
+    public interface IUpdateRating
     {
-        void Log(string message);
+        void UpdateRating(decimal rating);
+    }
+
+    public interface IRatingContext : ILogger
+    {
         string LoadPolicyFromFile();
         string LoadPolicyFromURI(string uri);
         Policy GetPolicyFromJsonString(string policyJson);
         Policy GetPolicyFromXmlString(string policyXml);
         Rater CreateRaterForPolicy(Policy policy, IRatingContext context);
-        void UpdateRating(decimal rating);
         RatingEngine Engine { get; set; }
-        ConsoleLogger Logger { get; }
     }
 }
