@@ -8,7 +8,7 @@ namespace ArdalisRating
         {
             Console.WriteLine("Ardalis Insurance Rating System Starting...");
 
-            var engine = new RatingEngine();
+            var engine = new RatingEngine(new ConsoleLogger());
             engine.Rate();
 
             if (engine.Rating > 0)
