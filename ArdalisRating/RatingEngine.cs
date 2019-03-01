@@ -32,7 +32,7 @@
 
             string policyJson = _policySource.GetPolicyFromSource();
 
-            var policy = Context.GetPolicyFromJsonString(policyJson);
+            var policy = _policySerializer.GetPolicyFromString(policyJson);
 
             var rater = Context.CreateRaterForPolicy(policy, Context);
 
