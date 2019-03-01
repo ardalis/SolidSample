@@ -4,6 +4,13 @@ namespace ArdalisRating
 {
     public class DefaultRatingContext : IRatingContext
     {
+        private readonly IPolicySource _policySource;
+
+        public DefaultRatingContext(IPolicySource policySource)
+        {
+            _policySource = policySource;
+        }
+
         public RatingEngine Engine { get; set; }
 
         public Rater CreateRaterForPolicy(Policy policy, IRatingContext context)
@@ -23,7 +30,7 @@ namespace ArdalisRating
 
         public string LoadPolicyFromFile()
         {
-            return new FilePolicySource().GetPolicyFromSource();
+            return _policySource.GetPolicyFromSource();
         }
 
         public string LoadPolicyFromURI(string uri)
