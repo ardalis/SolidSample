@@ -5,10 +5,13 @@ namespace ArdalisRating
     public class DefaultRatingContext : IRatingContext
     {
         private readonly IPolicySource _policySource;
+        private readonly IPolicySerializer _policySerializer;
 
-        public DefaultRatingContext(IPolicySource policySource)
+        public DefaultRatingContext(IPolicySource policySource,
+            IPolicySerializer policySerializer)
         {
             _policySource = policySource;
+            _policySerializer = policySerializer;
         }
 
         public RatingEngine Engine { get; set; }
@@ -20,7 +23,7 @@ namespace ArdalisRating
 
         public Policy GetPolicyFromJsonString(string policyJson)
         {
-            return new JsonPolicySerializer().GetPolicyFromJsonString(policyJson);
+            return _policySerializer.GetPolicyFromString(policyJson);
         }
 
         public Policy GetPolicyFromXmlString(string policyXml)
