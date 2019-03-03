@@ -17,7 +17,6 @@ namespace WebRating.Controllers
             _policySource = policySource;
         }
 
-        // GET api/values/5
         [HttpPost()]
         public ActionResult<decimal> Rate([FromBody] string policy)
         {
