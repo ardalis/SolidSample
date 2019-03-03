@@ -27,7 +27,6 @@ namespace ArdalisRating.Tests
                 Make = "BMW",
                 Deductible = 250m
             };
-            var ratingUpdater = new FakeRatingUpdater();
             var logger = new FakeLogger();
             var rater = new AutoPolicyRater(logger);
 
@@ -45,7 +44,6 @@ namespace ArdalisRating.Tests
                 Make = "BMW",
                 Deductible = 500m
             };
-            var ratingUpdater = new FakeRatingUpdater();
             var logger = new FakeLogger();
             var rater = new AutoPolicyRater(logger);
 
