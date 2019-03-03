@@ -11,7 +11,6 @@
         private readonly IPolicySerializer _policySerializer;
         private readonly RaterFactory _raterFactory;
 
-        //public IRatingContext Context { get; set; }
         public decimal Rating { get; set; }
 
         public RatingEngine(ILogger logger,
@@ -23,8 +22,6 @@
             _policySource = policySource;
             _policySerializer = policySerializer;
             _raterFactory = raterFactory;
-            //Context = new DefaultRatingContext(_policySource, _policySerializer);
-            //Context.Engine = this;
         }
 
         public void Rate()
