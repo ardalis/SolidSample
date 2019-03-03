@@ -8,6 +8,7 @@
         {
             _engine = engine;
         }
+
         public void UpdateRating(decimal rating)
         {
             _engine.Rating = rating;

@@ -7,10 +7,13 @@ namespace ArdalisRating
         static void Main(string[] args)
         {
             Console.WriteLine("Ardalis Insurance Rating System Starting...");
-
-            var engine = new RatingEngine(new ConsoleLogger(),
+            var logger = new ConsoleLogger();
+            RatingEngine engine = null;
+            engine = new RatingEngine(logger,
                 new FilePolicySource(),
-                new JsonPolicySerializer());
+                new JsonPolicySerializer(),
+                new RaterFactory(logger));
+
             engine.Rate();
 
             if (engine.Rating > 0)

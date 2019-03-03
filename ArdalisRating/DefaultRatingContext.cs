@@ -18,7 +18,7 @@ namespace ArdalisRating
 
         public Rater CreateRaterForPolicy(Policy policy, IRatingContext context)
         {
-            return new RaterFactory(new RatingUpdater(Engine)).Create(policy);
+            return new RaterFactory(new ConsoleLogger()).Create(policy);
         }
 
         public Policy GetPolicyFromJsonString(string policyJson)
