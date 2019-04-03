@@ -25,7 +25,7 @@ Please use [Issues](https://github.com/ardalis/SolidSample/issues) to report act
 
 If you found this course helpful here are some other resources you may like:
 
-- [Weekly Dev Tips Podcast](https://www.weeklydevtips.com/)
+- [Weekly Dev Tips Podcast](https://www.weeklydevtips.com/) (see also [YouTube Channel](https://www.youtube.com/channel/UC1OeiOnqUZHVinzRK5MuHsA))
 - [Clean Architecture Solution Template](https://github.com/ardalis/CleanArchitecture)
 - [Live Coding Streams](https://twitch.tv/ardalis)
 - [Group Mentoring with Ardalis](https://devbetter.com)
