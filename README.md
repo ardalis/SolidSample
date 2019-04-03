@@ -3,7 +3,7 @@
 A sample application used to demonstrate SOLID principles for the Pluralsight course, [SOLID Principles for C# Developers](https://app.pluralsight.com/library/courses/csharp-solid-principles).
 
 ## Give a Star! :star:
-If you like or are using this project to learn or start your solution, please give it a star. Thanks!
+If you like this project please give it a star. Thanks!
 
 ## Usage Instructions
 
