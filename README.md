@@ -29,4 +29,5 @@ If you found this course helpful here are some other resources you may like:
 - [Clean Architecture Solution Template](https://github.com/ardalis/CleanArchitecture)
 - [Live Coding Streams](https://twitch.tv/ardalis)
 - [Group Mentoring with Ardalis](https://devbetter.com)
+- [Clean Code](https://amzn.to/2FNjh2y) on Amazon
 
