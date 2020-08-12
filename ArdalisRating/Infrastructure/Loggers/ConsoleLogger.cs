@@ -2,7 +2,7 @@
 
 namespace ArdalisRating
 {
-    public class ConsoleLogger
+    public class ConsoleLogger : ILogger
     {
         public void Log(string message)
         {

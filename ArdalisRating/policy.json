@@ -1,6 +1,5 @@
 ﻿{
-  "type": "Flood",
+  "type": "Land",
   "bondAmount": "1000000",
-  "valuation": "1100000",
-  "elevationAboveSeaLevelFeet": "1001"
+  "valuation": "1100000"
 }
