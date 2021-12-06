@@ -43,7 +43,5 @@ namespace ArdalisRating.Tests
 
             Assert.Equal(0, result);
         }
-
-        
     }
 }
