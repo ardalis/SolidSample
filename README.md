@@ -14,6 +14,7 @@ The `master` branch shows the *initial* code used in the course. It's the starti
 - [LSP Start](https://github.com/ardalis/SolidSample/tree/LSP-START)
 - [ISP Start](https://github.com/ardalis/SolidSample/tree/ISP-START)
 - [DIP Start](https://github.com/ardalis/SolidSample/tree/DIP-START)
+- [FINAL VERSION](https://github.com/ardalis/SolidSample/tree/current)
 
 The sample code was written using [Visual Studio 2019](https://visualstudio.com/). You can download the free Community edition which should work fine with this code. Alternately, you can use Visual Studio Code or another editor you prefer.
 
