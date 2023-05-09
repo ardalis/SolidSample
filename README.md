@@ -15,6 +15,7 @@ A sample application used to demonstrate *SOLID* principles.
 ### LSP - Liskov Substitution
 
 > A subclass must be substitutable for their base types.
+> See an [LSP example here](./docs/LSP-README.md).
 
 ### ISP - Interface Segregation
 
